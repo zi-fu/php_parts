@@ -87,8 +87,8 @@ class Encrypt
             // basic encryption
             $iv = ($ivSize = \openssl_cipher_iv_length($this->cipher)) ? \openssl_random_pseudo_bytes($ivSize) : null;
 
-            echo '<br>iv :: ';
-            var_dump($iv);
+            // 確認用
+            echo '<br>iv :: ';var_dump($iv);
 
             if ($ivSize === false) {
                 throw new \ErrorException('サポートしていない暗号化方式です。');
